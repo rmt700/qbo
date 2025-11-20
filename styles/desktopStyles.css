@@ -1,0 +1,336 @@
+/* ============================= */
+/* Base Styles
+    These styles set up the default look and feel for the body, main, and section elements.
+*/
+body {
+    margin: 0; /* Removes default margin from body */
+    font-family: Arial, sans-serif; /* Sets the font for the page */
+    line-height: 1.6; /* Sets the line height for readability */
+    background: #fff; /* Sets background color to white */
+    color: #1a1a1a; /* Sets default text color */
+    padding-left: 0px; /* Removes left padding */
+}
+
+main {
+    margin-top: 70px; /* Adds space at the top for fixed header */
+    padding: 0px; /* Removes default padding */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 0; /* Removes left padding */
+    padding-bottom: 20px; /* Adds space between the body content and the footer */
+}
+
+section{
+    max-width: 1200px; /* Maximum width for content */
+    margin: 0 30px auto; /* Center section with left/right margin */
+    padding: 0px; /* No padding */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 0; /* Removes left padding */
+}
+
+/* ============================= */
+/* Hamburger Menu Icon Styles
+    Styles for the hamburger menu toggle icon (hidden on desktop).
+*/
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+}
+
+/* ============================= */
+/* Header Styles
+    Styles for the fixed header bar, including layout, color, and spacing.
+*/
+header {
+    position: fixed; /* Fixes header to top */
+    top: 0; /* Aligns header to top */
+    left: 0; /* Aligns header to left */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box; /* Includes padding/border in width */
+    background-color: #F5DEB3; /* Header background color */
+    color: #111; /* Header text color */
+    padding: 10px 20px; /* Padding inside header */
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertically center items */
+    z-index: 1000; /* Stacks header above other elements */
+    overflow-x: hidden; /* Allows horizontal scroll if needed */
+    min-height: 60px; /* Minimum height for header */
+}
+
+/* ============================= */
+/* Heading Styles
+    Styles for the main site heading in the header.
+*/
+h1 {
+    margin: 0; /* Removes default margin */
+    font-size: 1.5rem; /* Large heading */
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* ============================= */
+/* Navigation Styles
+    Styles for the navigation bar and its layout.
+*/
+nav {
+    display: flex; /* Flexbox for nav items */
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Vertically center nav items */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    max-width: 100%; /* Prevents nav from exceeding container */
+    overflow-x: hidden; /* Allows horizontal scroll if needed */
+    gap: 0; /* No gap between items */
+}
+
+/* ============================= */
+/* Navigation Link Styles
+    Styles for each navigation link in the nav bar.
+*/
+nav a {
+    background: #F5F5DC; /* Nav item background */
+    color: #111; /* Nav item text color */
+    text-decoration: none; /* Removes underline */
+    margin-right: 0px; /* No right margin */
+    font-size: 1rem; /* Font size */
+    white-space: nowrap; /* Prevents text wrap */
+    border-radius: 8px; /* Rounded corners */
+    transition: background 0.2s, color 0.2s; /* Smooth hover effect */
+    min-width: 100px; /* Minimum width for nav item */
+    max-width:  100px; /* Maximum width for nav item */
+    width: 100px; /* Fixed width for nav item */
+    text-align: center; /* Center text */
+    display: inline-block; /* Inline block for sizing */
+    box-sizing: border-box; /* Includes padding/border in width */
+    min-height: 50px; /* Minimum height for nav item */
+    height: 50px; /* Fixed height for nav item */
+    line-height: 50px; /* Vertically center text */
+}
+
+/* ============================= */
+/* Navigation Link Hover/Focus Styles
+    Styles for navigation links when hovered or focused.
+*/
+nav a:focus, nav a:hover {
+    background: #C0C0C0; /* Hover/focus background */
+    color: #fff; /* Hover/focus text color */
+}
+
+/* ============================= */
+/* Navigation Link Spacing
+    Adds spacing between navigation links except the last one.
+*/
+nav a:not(:last-child) {
+    margin-right: 12px; /* Space between nav items */
+}
+
+/* ============================= */
+/* Footer Styles
+    Styles for the site footer bar at the bottom of the page.
+*/
+.site-footer {
+    background: #C0C0C0; /* Footer background */
+    color: #111; /* Footer text color */
+    padding: 0; /* No padding */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Aligns to bottom */
+    min-height: 20px; /* Minimum height */
+    height:  40px; /* Fixed height */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+}
+
+/* ============================= */
+/* Footer Content Styles
+    Styles for the content inside the site footer.
+*/
+.footer-content {
+    margin: 0 auto; /* Center content */
+    max-width: 1200px; /* Max width for content */
+}
+
+/* ============================= */
+/* Button Styles
+    Styles for primary buttons and all <button> elements.
+*/
+.button-primary, button {
+    background: #337ab7; /* Button background */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding inside button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    transition: background 0.2s; /* Smooth hover effect */
+}
+
+/* ============================= */
+/* Button Hover/Focus Styles
+    Styles for buttons when hovered or focused.
+*/
+.button-primary:hover, .button-primary:focus, button:hover, button:focus {
+    background: #C0C0C0; /* Hover/focus background */
+    color:#fff; /* Hover/focus text color */
+}
+
+/* ============================= */
+/* Heading 2 Styles
+    Styles for all <h2> elements.
+*/
+h2 {
+    text-align: left; /* Aligns h2 to the left */
+}
+
+
+
+/* ============================= */
+/* Services Section Styles
+    Styles for the services grid and service cards.
+*/
+.services-grid {
+    display: grid; /* CSS grid for services */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+}
+
+.service-card {
+    background: white; /* Card background */
+    padding: 2rem; /* Card padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Card shadow */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}
+
+.service-card h3 {
+    color: #3498db; /* Heading color */
+    margin-bottom: 1rem; /* Space below heading */
+    font-size: 1.5rem; /* Heading size */
+}
+
+.service-icon {
+    font-size: 3rem; /* Icon size */
+    margin-bottom: 1rem; /* Space below icon */
+    color: #3498db; /* Icon color */
+}
+
+
+
+/* ============================= */
+/* Pricing Section Styles
+    Styles for the pricing section and pricing cards.
+*/
+.pricing {
+    padding: 80px 0; /* Section padding */
+}
+
+.pricing-grid {
+    display: grid; /* CSS grid for pricing */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+    margin-top: 3rem; /* Space above grid */
+}
+
+.pricing-card {
+    background: white; /* Card background */
+    border: 2px solid #e0e0e0; /* Card border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Card padding */
+    text-align: center; /* Center text */
+    transition: all 0.3s; /* Smooth hover effect */
+}
+
+.pricing-card:hover {
+    border-color: #3498db; /* Highlight border on hover */
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2); /* Shadow on hover */
+}
+
+.pricing-card.featured {
+    border-color: #3498db; /* Featured card border */
+    transform: scale(1.05); /* Slightly larger */
+}
+
+.price {
+    font-size: 3rem; /* Price size */
+    color: #3498db; /* Price color */
+    font-weight: bold; /* Bold price */
+    margin: 1rem 0; /* Space above/below */
+}
+
+.price span {
+    font-size: 1rem; /* Smaller text for span */
+    color: #666; /* Muted color */
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input, .form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-info h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-item-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 1rem;
+}
+
+
+

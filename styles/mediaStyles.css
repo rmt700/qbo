@@ -1,0 +1,129 @@
+/* ============================= */
+/* Mobile Styles (max-width: 768px)
+    This section contains all responsive styles for screens 768px wide or less.
+    It adjusts the header, navigation, and text for mobile usability.
+*/
+@media (max-width: 768px) {
+    /* Header section: controls the layout of the header on mobile */
+    header {
+        flex-direction: row; /* Keep header items in a row on mobile */
+    }
+
+    /* Header title: makes the site title smaller on mobile */
+    header h1 {
+        font-size: 1.2rem; /* Smaller heading on mobile */
+    }
+
+    /* ============================= */
+    /* Responsive Section Padding (max-width: 768px)
+        Adds padding to sections on small screens for better spacing.
+    */
+    section {
+        padding: 10px; /* Adds smaller padding for narrow screens */
+    }
+
+    /* Navigation menu: hidden by default, shown when active. Styles for mobile nav menu. */
+    nav {
+        display: none; /* Hide nav by default on mobile */
+        flex-direction: column; /* Stack nav items vertically */
+        background-color: rgba(250, 246, 240, 0.5); /* Semi-transparent background */
+        position: fixed; /* Fix nav to top */
+        top: 60px; /* Position below header */
+        right: 0; /* Align to right */
+        left: 0; /* Stretch to left */
+        border-top: none; /* No border on top */
+        box-shadow: none; /* No shadow */
+        z-index: 2000; /* On top of other elements */
+        box-sizing: border-box; /* Includes padding/border in width */
+        padding-bottom: 16px; /* Space at bottom */
+        align-items: flex-end; /* Align nav items to right */
+        padding-right: 0; /* No right padding */
+        min-height: 40px; /* Minimum height for nav */
+        height: auto; /* Height adjusts to content */
+        overflow-y: visible; /* Allow vertical overflow */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Navigation menu when active: display the menu when .active is added */
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    /* Navigation links: style each link in the mobile menu */
+    nav a {
+        display: flex; /* Flex for alignment */
+        align-items: center; /* Vertically center nav items */
+        justify-content: center; /* Horizontally center nav items */
+        margin: 10px 20px 0 0; /* Margin for spacing */
+        min-width: 100px; /* Minimum width for nav item */
+        max-width:  100px; /* Maximum width for nav item */
+        width: 100px; /* Fixed width for nav item */
+        text-align: center; /* Center text */
+        box-sizing: border-box; /* Includes padding/border in width */
+        word-break: break-word; /* Break long words */
+        overflow-wrap: break-word; /* Break long words */
+        min-height: 50px; /* Minimum height for nav item */
+        max-height: 50px; /* Maximum height for nav item */
+    }
+
+    /* Last navigation link: less right margin for the last item */
+    nav a:last-child {
+        margin-right: 10px; /* Less margin for last item */
+    }
+
+    /* Hamburger icon: show the menu toggle (hamburger) on mobile */
+    .menu-toggle {
+        display: flex; /* Show hamburger icon on mobile */
+        flex-direction: column; /* Stack bars vertically */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin-left: 20px; /* Space to the left */
+        background: #444; /* Dark background for visibility */
+        border-radius: 6px; /* Rounded bars */
+        padding: 6px; /* Padding around bars */
+    }
+
+    .menu-toggle span {
+        background: #fff; /* Bar color */
+        height: 3px; /* Bar height */
+        width: 25px; /* Bar width */
+        margin: 3px 0; /* Space between bars */
+    }
+
+    /* Ensure .contact-info is displayed at the bottom of the form on mobile */
+    .contact-grid {
+        display: flex;
+        flex-direction: column; /* Stack form and contact-info vertically */
+    }
+
+    .contact-info {
+        order: 2; /* Display .contact-info after the form */
+        margin-top: 20px; /* Add spacing above .contact-info */
+    }
+
+    form {
+        order: 1; /* Ensure the form appears first */
+    }
+
+    /* General h1: adjust heading size and margin for mobile */
+    h2 {
+        margin-left: 0; /* Remove left margin */
+        font-size: 1.2rem; /* Smaller heading */
+    }
+
+}
+
+/* ============================= */
+/* Responsive Section Padding (max-width: 1200px)
+    Adds padding to sections on medium screens for better spacing.
+*/
+@media (max-width: 1200px) {
+    section {
+        padding: 15px; /* Adds padding on smaller screens */
+    }
+}
+
+@media (max-width: 480) {
+    header h1 {
+        font-size: 1.2rem; /* Adds padding on smaller screens */
+    }
+}
