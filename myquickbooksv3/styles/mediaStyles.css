@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+
+    /* Navigation menu: hidden by default, shown when active. Styles for mobile nav menu. */
+    nav {
+        display: none; /* Hide nav by default on mobile */
+        flex-direction: column; /* Stack nav items vertically */
+        background-color: rgba(15, 101, 4, 0.5); /* Semi-transparent background */
+        background: (to right, #2ca01c, #094a01);
+        position: fixed; /* Fix nav to top */
+        top: 50px; /* Position below header */
+        right: 0; /* Align to right */
+        left: 0; /* Stretch to left */
+        border-top: none; /* No border on top */
+        box-shadow: none; /* No shadow */
+        z-index: 2000; /* On top of other elements */
+        box-sizing: border-box; /* Includes padding/border in width */
+        align-items: flex-end; /* Align nav items to right */
+        padding-right: 0; /* No right padding */
+        overflow-y: visible; /* Allow vertical overflow */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Navigation menu when active: display the menu when .active is added */
+    nav.active {
+        display: flex; /* Show nav when active */
+        text-align: left; /* Left-justify menu items */
+        align-items: flex-start; /* Align items to the left */
+        padding-left: 10px; /* Align text 10px from the left margin */
+    }
+
+    /* Navigation links: style each link in the mobile menu */
+    nav a {
+        display: flex; /* Flex for alignment */
+        align-items: center; /* Vertically center nav items */
+        justify-content: left; /* Horizontally center nav items */
+        min-width: 100px; /* Minimum width for nav item */
+        max-width:  100px; /* Maximum width for nav item */
+        width: 100px; /* Fixed width for nav item */
+        text-align: left; /* Center text */
+        box-sizing: border-box; /* Includes padding/border in width */
+        word-break: break-word; /* Break long words */
+        overflow-wrap: break-word; /* Break long words */
+        min-height: 50px; /* Minimum height for nav item */
+        max-height: 50px; /* Maximum height for nav item */
+        margin: 0; /* Remove vertical spacing */
+        padding: 0; /* Remove vertical spacing */
+    }
+
+
+    /* ============================= */
+    /* HAMBURGER */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 20px;
+        background: #2ca01c;
+        padding: 6px;
+    }
+
+    .menu-toggle span {
+        background: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+    }
+
+    /* Ensure .contact-info is displayed at the bottom of the form on mobile */
+    .contact-grid {
+        display: flex;
+        flex-direction: column; /* Stack form and contact-info vertically */
+    }
+
+    .contact-info {
+        order: 2; /* Display .contact-info after the form */
+        margin-top: 20px; /* Add spacing above .contact-info */
+    }
+
+    form {
+        order: 1; /* Ensure the form appears first */
+    }
+
+    /* General h1: adjust heading size and margin for mobile */
+    h2 {
+        margin-left: 0; /* Remove left margin */
+        font-size: 1.2rem; /* Smaller heading */
+    }
+}

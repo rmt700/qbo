@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickBooks Professional Bookkeeping Services">
+    <title>Contact - QuickBooks Professional Bookkeeping Services</title>
+    <link rel="stylesheet" href="styles/desktopStyles.css">
+    <link rel="stylesheet" href="styles/mediaStyles.css">
+
+    <script src="scripts/headerMenu.js"> </script>
+    <script src="scripts/footer.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.createHeaderAndMenu) {
+                window.createHeaderAndMenu();
+            }
+            if (window.createFooter) {
+                window.createFooter();
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our QuickBooks Professional Bookkeeping Services, please don't hesitate to reach out. We are here to help.</p>
+
+            <div class="contact-grid">
+                <form id="contactForm" action="mailto:your@email.com" method="POST" enctype="text/plain" novalidate>
+                    <div style="margin-bottom: 1em;">
+                        <label for="name">Name: <span style="color: red">*</span><span id="nameError" style="color: red; font-size: 0.9em;"></span></label><br>
+                        <input type="text" id="name" name="name" required style="width: 100%; max-width: 400px;"> 
+                    </div>
+
+                    <div style="margin-bottom: 1em;">
+                        <label for="email">Email: <span style="color: red">*</span><span id="emailError" style="color: red; font-size: 0.9em;"></span></label><br>
+                        <input type="email" id="email" name="email"  required style="width: 100%; max-width: 400px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1em;">
+                        <label for="phone">Phone Number: <span style="color: red">*</span><span id="phoneError" style="color: red; font-size: 0.9em;"></span></label><br>
+                        <input type="tel" id="phone" name="phone" required pattern="^\\+?[0-9 .-]{7,15}$" style="width: 100%; max-width: 400px;">
+                       
+                    </div>
+
+                    <div style="margin-bottom: 1em;">
+                        <label for="message">Message: <span style="color: red">*</span><span id="messageError" style="color: red; font-size: 0.9em;"></span></label><br>
+                        <textarea id="message" name="message" rows="5"  required style="width: 100%; max-width: 400px;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="button-primary">Send</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📧</div>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@qboservices.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong><br>
+                            (555) 123-4567
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">⏰</div>
+                        <div>
+                            <strong>Business Hours</strong><br>
+                            Mon-Fri: 9am - 5pm EST
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    let valid = true;
+
+                    // Validate Name
+                    const name = document.getElementById('name').value.trim();
+                    const nameError = document.getElementById('nameError');
+                    if (!name || !/^[A-Za-z\s'-]+$/.test(name)) {
+                        nameError.textContent = "Please enter a valid name.";
+                        valid = false;
+                    } else {
+                        nameError.textContent = '';
+                    }
+
+                    // Validate Email
+                    const email = document.getElementById('email').value.trim();
+                    const emailError = document.getElementById('emailError');
+                    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+                        emailError.textContent = 'Please enter a valid email address.';
+                        valid = false;
+                    } else {
+                        emailError.textContent = '';
+                    }
+
+                    // Validate Phone
+                    const phone = document.getElementById('phone').value.trim();
+                    const phoneError = document.getElementById('phoneError');
+                    const phonePattern = /^\+?[0-9 .-]{7,15}$/;
+                    if (!phone || !phonePattern.test(phone)) {
+                        phoneError.textContent = 'Please enter a valid phone number.';
+                        valid = false;
+                    } else {
+                        phoneError.textContent = '';
+                    }
+
+                    // Validate Message
+                    const message = document.getElementById('message').value.trim();
+                    const messageError = document.getElementById('messageError');
+                    if (!message) {
+                        messageError.textContent = 'Please enter your message.';
+                        valid = false;
+                    } else {
+                        messageError.textContent = '';
+                    }
+
+                    // Prevent form submission if validation fails
+                    if (!valid) {
+                        event.preventDefault();
+                    }
+                });
+
+            </script>
+
+        </section>
+    </main>
+</body>
+</html>
