@@ -1,0 +1,129 @@
+/* ============================= */
+/* Base Styles
+    These styles set up the default look and feel for the body, main, and section elements.
+*/
+html {
+    font-family: Arial, Tahoma, Verdana, Geneva, sans-serif;
+    text-align: left; /* Aligns text to the left */
+
+}
+body {
+    margin: 0; /* Removes default margin from body */
+    line-height: 1.2; /* Sets the line height for readability */
+    background: #fff; /* Sets background color to white */
+    color: #1a1a1a; /* Sets default text color */
+}
+
+main {
+    margin: 50px 0 50px 0; /* top right bottom left; */
+    padding: 50px 20px 0 0; /* Removes default padding:  Top, right, bottom, and left */
+}
+
+section{
+    max-width: 100vw; /* Maximum width for content */
+    margin: 0 20px 20px 20px; /* Top, right, bottom, and left */
+    padding: 0; /* Removes paddingTop, right, bottom, and left*/
+}
+
+
+subsection {
+    color: #0056c2;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0; /* Adds space after section headers */
+    padding: 0; /* Adds space after section headers */
+}
+
+p {
+    font-size: .9em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 0 25px; /* Adds space after paragraphs */
+}
+
+ul {
+    font-size: .9em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 0 50px; /* Adds space after unordered lists */
+}
+
+table {
+    margin: 0 0 0 20px; /* Adds space after tables */
+    width: auto;
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td, th {
+    font-size: .9em;
+    font-weight: normal;
+    text-align: left;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+
+/* ============================= */
+/* Header Styles
+    Styles for the fixed header bar, including layout, color, and spacing.
+*/
+header {
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0; /* Aligns to the top */
+    width: 97vw; /* Full width */
+    background: linear-gradient(to right, #00008b, #0000cd); /* Dark gradient blue */
+    color: #FFFFFF; /* Header text color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    border-radius: 15px; /* Adds curved ends to the header block */
+}
+
+title {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px 0 0 20px; /* Adds space after section headers */
+    padding: 0; /* Adds space after section headers */
+}
+
+subtitle {
+    display: block;
+    font-size: 0.90em;
+    font-weight: normal;
+    margin: 0px 0 20px 20px; /* Adds space after section headers */
+    padding: 0 0 0 40px; /* Adds space after section headers */
+}
+
+
+/* ============================= */
+/* Footer Styles
+    Styles for the site footer bar at the bottom of the page.
+*/
+.site-footer {
+    background: #C0C0C0; /* Footer background */
+    color: #111; /* Footer text color */
+    font-size: .75em;
+    padding: 0; /* No padding */
+    width: 97vw; /* Full width */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Aligns to bottom */
+    min-height: 20px; /* Minimum height */
+    height:  40px; /* Fixed height */
+    display: flex; /* Flexbox for centering */
+    text-align: center; /* Center text */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    border-radius: 15px; /* Adds curved ends to the header block */
+}
+
+/* ============================= */
+/* Footer Content Styles
+    Styles for the content inside the site footer.
+*/
+.footer-content {
+    margin: 0 auto; /* Center content */
+    max-width: 1200px; /* Max width for content */
+}
