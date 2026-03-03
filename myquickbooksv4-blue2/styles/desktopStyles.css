@@ -1,0 +1,198 @@
+/* ============================= */
+/* Base Styles
+    These styles set up the default look and feel for the body, main, and section elements.
+*/
+html {
+    font-family: Arial, Tahoma, Verdana, Geneva, sans-serif;
+    text-align: left; /* Aligns text to the left */
+    font-size: 16px;
+
+}
+body {
+    margin: 0; /* Removes default margin from body */
+    line-height: 1.2; /* Sets the line height for readability */
+    background: #fff; /* Sets background color to white */
+    color: #1a1a1a; /* Sets default text color */
+}
+
+main {
+    margin: 50px 0 50px 0; /* top right bottom left; */
+    padding: 50px 20px 0 0; /* Removes default padding:  Top, right, bottom, and left */
+}
+
+section{
+    max-width: 100vw; /* Maximum width for content */
+    margin: 0 20px 20px 20px; /* Top, right, bottom, and left */
+    padding: 0; /* Removes paddingTop, right, bottom, and left*/
+}
+
+subsection {
+    color: #0056c2;
+    display: block;
+    font-weight: bold;
+    padding: 20px 0 0 0; /* Adds space after section headers */
+}
+
+.subsection-cell {
+    top: 200px; /* Adjust as needed to align with the left column */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-cell {
+    font-weight: normal;
+    top: 60%; /* Adjust as needed to align with the left column */
+    left: 50px; /* Adjust as needed to align with the left column */
+}
+
+ul {
+    font-weight: normal;
+    margin: 0;
+    padding: 0 0 0 30px; /* Adds space after unordered lists */
+}
+
+
+.bkgimage{
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center;  /* Centers the image within the cell */
+    background-size: cover;      /* Scales the image to cover the entire cell */
+    /*width: 250px; */              /* Ensure the cell has a defined size */
+    /*height: 250px; */
+    width: min(20vw, 250px);  /* Responsive max size */
+    height: min(20vw, 250px); /* Same as width */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+  }
+
+
+/* Clear floats after the columns to contain the float within the parent container */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+table#pricing {
+    margin: 0 0 0 20px; /* Adds space after tables */
+    width: auto;
+    border: 3px solid black;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table#pricing td, table#pricing th {
+    font-weight: normal;
+    text-align: left;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+
+table#bio {
+    margin: 50px 0 0 100px;
+    text-align: left;
+    border: none;
+}
+
+table#bio td, table#bio th {
+    border: none;
+}
+
+/* ============================= */
+/* Header Styles
+    Styles for the fixed header bar, including layout, color, and spacing.
+*/
+header {
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0; /* Aligns to the top */
+    width: 97vw; /* Full width */
+    background: linear-gradient(to right, #00008b, #0000cd); /* Dark gradient blue */
+    color: #FFFFFF; /* Header text color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    border-radius: 15px; /* Adds curved ends to the header block */
+}
+
+title {
+    display: block;
+    font-weight: bold;
+    margin: 20px 0 0 20px; /* Adds space after section headers */
+    padding: 0; /* Adds space after section headers */
+}
+
+subtitle {
+    display: block;
+    font-weight: normal;
+    margin: 0px 0 20px 20px; /* Adds space after section headers */
+    padding: 0 0 0 40px; /* Adds space after section headers */
+}
+
+.introduction-grid {
+    display: grid; /* CSS grid for pricing */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+}
+
+.introduction-card {
+    background: white; /* Card background */
+    background-color: #67bed9;
+    border: 2px solid #e0e0e0; /* Card border */
+    border-color: #3498db; /* Highlight border on hover */
+    border-radius: 10px; /* Rounded corners */
+    padding: 0 20px 0 20px; /* Card padding */
+    text-align: left; /* Center text */
+}
+
+/* ============================= */
+/* Pricing Section Styles
+    Styles for the pricing section and pricing cards.
+*/
+
+.pricing-grid {
+    display: grid; /* CSS grid for pricing */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+}
+
+.pricing-card {
+    background: white; /* Card background */
+    border: 2px solid #e0e0e0; /* Card border */
+    border-color: #3498db; /* Highlight border on hover */
+    border-radius: 10px; /* Rounded corners */
+    padding: 0 20px 0 20px; /* Card padding */
+    text-align: left; /* Center text */
+}
+
+
+/* ============================= */
+/* Footer Styles
+    Styles for the site footer bar at the bottom of the page.
+*/
+.site-footer {
+    background: #C0C0C0; /* Footer background */
+    color: #111; /* Footer text color */
+    font-size: .75em;
+    padding: 0; /* No padding */
+    width: 97vw; /* Full width */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Aligns to bottom */
+    min-height: 20px; /* Minimum height */
+    height:  40px; /* Fixed height */
+    display: flex; /* Flexbox for centering */
+    text-align: center; /* Center text */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    border-radius: 15px; /* Adds curved ends to the header block */
+}
+
+/* ============================= */
+/* Footer Content Styles
+    Styles for the content inside the site footer.
+*/
+.footer-content {
+    margin: 0 auto; /* Center content */
+    max-width: 1200px; /* Max width for content */
+}
